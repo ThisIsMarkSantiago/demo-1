@@ -5,6 +5,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ServicesModule } from '../services/services.module';
+import { PipesModule } from '../pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ServicesModule } from '../services/services.module';
     CommonModule,
     RouterModule,
     FormsModule,
-    ServicesModule
+    ServicesModule,
+    PipesModule
   ],
   exports: [
     HomeComponent,
