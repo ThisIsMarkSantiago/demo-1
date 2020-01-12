@@ -1,0 +1,108 @@
+{
+  "provinces": [
+    {
+      "id": "BLCN",
+      "name":  "Bulacan",
+      "cities": [
+        {
+          "id": "MLLS",
+          "name": "Malolos",
+          "barangays": [
+            {
+              "id": "LNGS",
+              "name": "Longos"
+            }, {
+              "id": "TKY",
+              "name": "Tikay"
+            }, {
+              "id": "CNTA",
+              "name": "Cainta"
+            }
+          ]
+        }, {
+          "id": "CLMPT",
+          "name": "Calumpit",
+          "barangays": [
+            {
+              "id": "CLMPNG",
+              "name": "Calumpang"
+            }, {
+              "id": "SNMRCS",
+              "name": "San Marcos"
+            }, {
+              "id": "IBA",
+              "name": "Iba Este"
+            }
+          ]
+        }, {
+          "id": "PLLN",
+          "name": "Pulilan",
+          "barangays": [
+            {
+              "id": "PBLCN",
+              "name": "Poblacion"
+            }, {
+              "id": "STCRSTO",
+              "name": "Sto Cristo"
+            }, {
+              "id": "TAAL",
+              "name": "Taal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PMPNGA",
+      "name":  "Pampanga",
+      "cities": [
+        {
+          "id": "APLT",
+          "name": "Apalit",
+          "barangays": [
+            {
+              "id": "SLPN",
+              "name": "Sulipan"
+            }, {
+              "id": "BLCC",
+              "name": "Balucuc"
+            }, {
+              "id": "SMPLC",
+              "name": "Sampaloc"
+            }
+          ]
+        }, {
+          "id": "SNFRNNDO",
+          "name": "San Fernando",
+          "barangays": [
+            {
+              "id": "BLAON",
+              "name": "Bulaon"
+            }, {
+              "id": "DLPLR",
+              "name": "Del Pilar"
+            }, {
+              "id": "DLCRMN",
+              "name": "Del Carmen"
+            }
+          ]
+        }, {
+          "id": "MCBB",
+          "name": "Macabebe",
+          "barangays": [
+            {
+              "id": "BTSN",
+              "name": "Batasan"
+            }, {
+              "id": "SNSTBN",
+              "name": "San Esteban"
+            }, {
+              "id": "DLYP",
+              "name": "Dalayap"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
