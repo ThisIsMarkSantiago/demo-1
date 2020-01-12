@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Province, City, Barangay, Registration } from 'src/app/interfaces';
 import { ProvincesService } from 'src/app/services/provinces.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -12,7 +13,10 @@ export class RegistrationComponent implements OnInit {
   registration: Registration;
   provinces: Array<Province>;
 
-  constructor(private provinceService: ProvincesService) {
+  constructor(
+    private provinceService: ProvincesService,
+    private router: Router
+  ) {
     this.registration = {} as Registration;
     this.provinces = this.provinceService.getProvinces();
   }
@@ -46,7 +50,9 @@ export class RegistrationComponent implements OnInit {
 
   onSubmit(form: FormControl) {
     if (form.valid) {
-      // TODO
+      this.router.navigateByUrl('/confirm', {
+        state: this.registration
+      });
     }
   }
 }

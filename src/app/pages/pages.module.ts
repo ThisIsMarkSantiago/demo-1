@@ -5,12 +5,14 @@ import { RegistrationComponent } from './registration/registration.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ServicesModule } from '../services/services.module';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { PipesModule } from '../pipes/pipes.module';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    ConfirmationComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,8 @@ import { PipesModule } from '../pipes/pipes.module';
   ],
   exports: [
     HomeComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    ConfirmationComponent
   ]
 })
 export class PagesModule { }

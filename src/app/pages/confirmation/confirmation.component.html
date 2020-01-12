@@ -1,0 +1,22 @@
+<div class="container"> 
+    <div class="row">
+      <div class="col-xs-12 col-md-8 offset-md-2">
+        <div class="card">
+          <h5 class="card-header"> Confirmation </h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"> <b> Full name: </b> {{ registration?.name }} </li>
+            <li class="list-group-item"> <b> Province: </b> {{ registration?.province | displayText : provinces }} </li>
+            <li class="list-group-item"> <b> City: </b> {{ registration?.city | displayText : cities }} </li>
+            <li class="list-group-item"> <b> Barangay: </b> {{ registration?.barangay | displayText : barangays }} </li>
+          </ul>
+          <div class="card-footer">
+            <div class="row">
+              <div class="col-xs-12 offset-md-6 col-md-6 offset-lg-9 col-lg-3">
+                <button routerLink="/" type="button" class="btn btn-secondary form-control"> Back to Home page </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
