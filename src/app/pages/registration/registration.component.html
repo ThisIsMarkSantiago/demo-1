@@ -1,0 +1,78 @@
+<div class="container"> 
+  <div class="row">
+    <div class="col-xs-12 col-md-8 offset-md-2">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"> Registration </h5>
+          <form #registrationForm="ngForm" (ngSubmit)="onSubmit(registrationForm)" novalidate>
+            <div class="row">
+              <div class="col-xs-12 col-md-6 col-lg-3">
+                <div class="form-group">
+                  <label for="name"> Full name </label>
+                  <input name="name" type="text" class="form-control" id="name" #name="ngModel" placeholder="Enter full name" required="required"
+                    [ngClass]="{ 'is-valid': (name.dirty || name.touched || registrationForm.submitted) && name.valid, 'is-invalid': (name.dirty || name.touched || registrationForm.submitted) && name.invalid }"
+                    [(ngModel)]="registration.name" (input)="fullnameValidator($event)">
+                  <div class="invalid-feedback">
+                    Full name is required!
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-6 col-lg-3">
+                <div class="form-group">
+                  <label for="province"> Province </label>
+                  <select name="province" class="form-control" id="province" #province="ngModel" placeholder="Enter province" required="required"
+                    [ngClass]="{ 'is-valid': (province.dirty || province.touched || registrationForm.submitted) && province.valid, 'is-invalid': (province.dirty || province.touched || registrationForm.submitted) && province.invalid }"
+                    [(ngModel)]="registration.province" (ngModelChange)="onProvinceChange()">
+                    <option [ngValue]="undefined"> Select Province </option>
+                    <option [ngValue]="province.id" *ngFor="let province of provinces"> {{ province.name }} </option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Province is required!
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-6 col-lg-3">
+                <div class="form-group">
+                  <label for="city"> City </label>
+                  <select name="city" class="form-control" id="city" #city="ngModel" placeholder="Enter city" required="required"
+                    [ngClass]="{ 'is-valid': (city.dirty || city.touched || registrationForm.submitted) && city.valid, 'is-invalid': (city.dirty || city.touched || registrationForm.submitted) && city.invalid }"
+                    [(ngModel)]="registration.city" (ngModelChange)="onCityChange()">
+                    <option [ngValue]="undefined"> Select City </option>
+                    <option [ngValue]="city.id" *ngFor="let city of getCities()"> {{ city.name }} </option>
+                  </select>
+                  <div class="invalid-feedback">
+                    City is required!
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-6 col-lg-3">
+                <div class="form-group">
+                  <label for="barangay"> Barangay </label>
+                  <select name="barangay" class="form-control" id="barangay" #barangay="ngModel" placeholder="Enter barangay" required="required"
+                    [ngClass]="{ 'is-valid': (barangay.dirty || barangay.touched || registrationForm.submitted) && barangay.valid, 'is-invalid': (barangay.dirty || barangay.touched || registrationForm.submitted) && barangay.invalid }"
+                    [(ngModel)]="registration.barangay">
+                    <option [ngValue]="undefined"> Select Barangay </option>
+                    <option [ngValue]="barangay.id" *ngFor="let barangay of getBarangays()"> {{ barangay.name }} </option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Barangay is required!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+          <div class="row">
+            <div class="col-xs-12 col-md-6 col-lg-3">
+              <button type="submit" class="btn btn-primary form-control" [disabled]="registrationForm.invalid"> Submit </button>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-3">
+              <button routerLink="/" type="button" class="btn btn-secondary form-control"> Cancel </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
