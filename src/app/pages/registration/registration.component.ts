@@ -42,10 +42,11 @@ export class RegistrationComponent implements OnInit {
 
   fullnameValidator(event) {
     const pattern = /[^A-Z. ]/g;
-    event.target.value = (event.target.value || '').toUpperCase().trim();
+    event.target.value = (event.target.value || '').toUpperCase();
     if (pattern.test(event.target.value)) {
       event.target.value = event.target.value.replace(pattern, '');
     }
+    this.registration.name = event.target.value;
   }
 
   onSubmit(form: FormControl) {
